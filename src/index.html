@@ -1,13 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MP1 - CS409 - Rohith Jagadeesan</title>
+
+  <!-- Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Our custom styles -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <!-- Navigation Bar - Sticky and Resizable -->
+  <nav class="navbar navbar--large" id="navbar">
+    <div class="navbar__inner">
+      <!-- Site Logo/Brand -->
+      <a class="navbar__brand" href="#top">
+        <i class="fa-solid fa-gem"></i>iPhone 14 Pro
+      </a>
+      
+      <!-- Main Navigation Menu -->
+      <div class="navbar__nav" id="navLinks">
+        <a class="nav__link" href="#hero">Home</a>
+        <a class="nav__link" href="#features">Features</a>
+        <a class="nav__link" href="#carousel">Specifications</a>
+        <a class="nav__link" href="#columns">Why iPhone?</a>
+        <a class="nav__link" href="#parallax">Join the club</a>
+        <a class="nav__link" href="#modal">Price</a>
+        <a class="nav__link" href="#video">Videos on iPhone</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </div>
+    </div>
+    
+    <!-- Reading Progress Indicator -->
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+    <span class="sr-only" id="progressLabel" aria-live="polite"></span>
+  </nav>
+
+  <main id="top">
+    <!-- Hero Section - Welcome Message -->
+    <header id="hero" class="section section--hero">
+      <div class="container hero__content">
+        <h1 class="fade-in-up">Introducing the iPhone 14 Pro Max</h1>
+        <p class="lead fade-in-up delay-1">
+          The iPhone 14 Pro is the latest and greatest iPhone from Apple. 
+          It has the latest features, design, and build quality.
+        </p>
+        <img src="assets/iphone14pro_hero.png" alt="iPhone 14 Pro" class="fade-in-up delay-2">
+        <a href="#features" class="btn fade-in-up delay-2">
+          <i class="fa-solid fa-circle-down"></i> Explore More!
+        </a>
+      </div>
+    </header>
+
+    <!-- Features Overview Section -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>What's Included</h2>
+        <ul class="features-list">
+          <li>Has the latest features like Dynamic Island, Always-On Display, and more.</li>
+          <li>Has the latest design and build quality.</li>
+          <li>Has the latest A16 Bionic chip.</li>
+          <li>Has the latest camera and video capabilities.</li>
+          <li>Has a large and all day battery and smart charging capabilities.</li>
+          <li>Has the latest display and audio capabilities.</li>
+          <li>Has the latest security and privacy capabilities.</li>
+          <li>Has the latest connectivity and cellular capabilities.</li>
+          <li>Has the latest iOS 17 operating system.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Image Carousel Section -->
+    <section id="carousel" class="section section--alt">
+      <div class="container">
+        <h2>Specifications</h2>
+        <p>Some key specifications of the iPhone 14 Pro Max.</p>
+        
+        <div class="carousel" data-carousel>
+          <!-- Previous Button -->
+          <button class="carousel__arrow carousel__arrow--prev" data-carousel-prev aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <!-- Carousel Container -->
+          <div class="carousel__viewport">
+            <div class="carousel__track" data-carousel-track>
+              <div class="carousel__slide">
+                <img src="assets/iphone14pro_camera.png" alt="Powerful camera system">
+                <div class="carousel__caption">Industry leading Cameras</div>
+              </div>
+              <div class="carousel__slide">
+                <img src="assets/iphone14pro_satellite.png" alt="Satellite connectivity">
+                <div class="carousel__caption">Satellite Connectivity during Emergency</div>
+              </div>
+              <div class="carousel__slide">
+                <img src="assets/iphone14pro_workout.png" alt="Excellent Workout Tracking">
+                <div class="carousel__caption">Workout Tracking</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Next Button -->
+          <button class="carousel__arrow carousel__arrow--next" data-carousel-next aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Multi-Column Layout Section -->
+    <section id="columns" class="section">
+      <div class="container">
+        <h2>Why iPhone?</h2>
+        <p>Three reasons why you should buy an iPhone 14 Pro Max.</p>
+        
+        <div class="grid-3">
+          <article class="card">
+            <h3><i class="fa-solid fa-bolt"></i> Performance</h3>
+            <p>The iPhone 14 Pro Max is the latest and greatest iPhone from Apple. It has the latest A16 bionic for true speed.</p>
+          </article>
+          <article class="card">
+            <h3><i class="fa-solid fa-camera"></i> Cameras</h3>
+            <p>The best camera system ever in a phone. It has the three camera setup with a main, ultrawide and telephoto lens./p>
+          </article>
+          <article class="card">
+            <h3><i class="fa-solid fa-shuffle"></i> iOS</h3>
+            <p>Has the best and smoothest software ever in a phone. Integrates seamlessly with all Apple products maintaining a robust connectivity within the ecosystem.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fixed Background Parallax Section -->
+    <section id="parallax" class="section section--parallax">
+      <div class="container center-vert">
+        <div class="parallax__content">
+          <h2>Join the Apple club</h2>
+          <p>You just need to buy an iPhone 14 Pro Max to join the Apple club. There are many exciting benefits to joining the Apple club.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Dialog Section -->
+    <section id="modal" class="section section--alt">
+      <div class="container">
+        <h2>Price of the iPhone 14 Pro Max</h2>
+        <p>Click the button below to see the price of the iPhone 14 Pro Max.</p>
+        <button class="btn" data-open-modal="#demoModal">
+          <i class="fa-solid fa-window-maximize"></i> You are so close to getting one!
+        </button>
+      </div>
+
+      <!-- Modal Dialog -->
+      <div class="modal" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__dialog" role="document">
+          <button class="modal__close" aria-label="Close modal" data-close-modal>&times;</button>
+          <h3 id="demoModalTitle">You came to the right place!</h3>
+          <p>The price for iPhone 14 Pro Max are as follows:</p>
+          <ul>
+            <li>$1,099 for the 128GB model</li>
+            <li>$1,199 for the 256GB model</li>
+            <li>$1,399 for the 512GB model</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HTML5 Video Section -->
+    <section id="video" class="section">
+      <div class="container">
+        <h2>Sample iPhone 14 Pro Max Videography</h2>
+        <p>Videos are just stunning on iPhone 14 Pro Max. Just try it out for yourself.</p>
+        <video class="video" controls preload="metadata" poster="assets/iphone14pro_thumbnail.jpg">
+          <source src="assets/iphone14pro_video.mp4" type="video/mp4">
+          Your browser does not support the video tag. Please update your browser to view this content.
+        </video>
+      </div>
+    </section>
+
+    <!-- Contact and Social Media Section -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <h2>Made by Rohith Jagadeesan</h2>
+        <p>Foolow Apple on social media</p>
+        <div class="social">
+          <a href="https://x.com/Apple" aria-label="Follow Apple on Twitter" title="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/apple/#" aria-label="Follow Apple on Instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <p>Connect with me on social media</p>
+        <div class="social">
+            <a href="https://github.com/Rohith-Jagadeesan" aria-label="Check out my GitHub" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/rohithj2/" aria-label="Connect with me on LinkedIn" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> MP1 - rohithj2. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for interactivity -->
+  <script src="js/main.js"></script>
+</body>
 </html>

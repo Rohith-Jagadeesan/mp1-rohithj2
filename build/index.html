@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All-in-One Single Page</title>
+
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Your compiled CSS from styles.scss -->
+  <link rel="stylesheet" href="ca1bdec4020c385c768a.css" />
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar--large" id="navbar">
+    <div class="navbar__inner">
+      <a class="navbar__brand" href="#top"><i class="fa-solid fa-gem"></i> MySite</a>
+      <div class="navbar__nav" id="navLinks">
+        <a class="nav__link" href="#hero">Home</a>
+        <a class="nav__link" href="#features">Features</a>
+        <a class="nav__link" href="#carousel">Carousel</a>
+        <a class="nav__link" href="#columns">Columns</a>
+        <a class="nav__link" href="#parallax">Parallax</a>
+        <a class="nav__link" href="#modal">Modal</a>
+        <a class="nav__link" href="#video">Video</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </div>
+    </div>
+    <!-- Reading progress -->
+    <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+    <span class="sr-only" id="progressLabel" aria-live="polite"></span>
+  </nav>
+
+  <main id="top">
+    <!-- HERO (full-viewport stripe, horizontally + vertically centered) -->
+    <header id="hero" class="section section--hero">
+      <div class="container hero__content">
+        <h1 class="fade-in-up">Welcome to the Demo</h1>
+        <p class="lead fade-in-up delay-1">Sticky navbar, progress indicator, carousel, columns, parallax, modal, video, animations, and icons—done.</p>
+        <a href="#features" class="btn fade-in-up delay-2"><i class="fa-solid fa-circle-down"></i> Explore</a>
+      </div>
+    </header>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Features</h2>
+        <ul class="features-list">
+          <li><i class="fa-solid fa-thumbtack"></i> Sticky navbar with size change on scroll</li>
+          <li><i class="fa-solid fa-chart-line"></i> Reading position indicator in the navbar</li>
+          <li><i class="fa-solid fa-angles-down"></i> Smooth scrolling & active menu highlighting</li>
+          <li><i class="fa-solid fa-images"></i> Carousel with side arrows (3+ slides)</li>
+          <li><i class="fa-solid fa-table-columns"></i> Multi-column responsive layout</li>
+          <li><i class="fa-solid fa-image"></i> Fixed background “parallax-like” section</li>
+          <li><i class="fa-solid fa-window-restore"></i> Modal windows</li>
+          <li><i class="fa-solid fa-video"></i> Embedded HTML5 video</li>
+          <li><i class="fa-solid fa-wand-magic-sparkles"></i> CSS3 animations</li>
+          <li><i class="fa-brands fa-x-twitter"></i> Social icons (Font Awesome)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CAROUSEL -->
+    <section id="carousel" class="section section--alt">
+      <div class="container">
+        <h2>Carousel</h2>
+        <div class="carousel" data-carousel>
+          <button class="carousel__arrow carousel__arrow--prev" data-carousel-prev aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="carousel__viewport">
+            <div class="carousel__track" data-carousel-track>
+              <div class="carousel__slide">
+                <img src="https://picsum.photos/1200/500?random=1" alt="Slide 1">
+                <div class="carousel__caption">Slide One</div>
+              </div>
+              <div class="carousel__slide">
+                <img src="https://picsum.photos/1200/500?random=2" alt="Slide 2">
+                <div class="carousel__caption">Slide Two</div>
+              </div>
+              <div class="carousel__slide">
+                <img src="https://picsum.photos/1200/500?random=3" alt="Slide 3">
+                <div class="carousel__caption">Slide Three</div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel__arrow carousel__arrow--next" data-carousel-next aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MULTI-COLUMN -->
+    <section id="columns" class="section">
+      <div class="container">
+        <h2>Multi-column Layout</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3><i class="fa-solid fa-bolt"></i> Fast</h3>
+            <p>Responsive grid with three columns on large screens and graceful stacking on smaller viewports.</p>
+          </article>
+          <article class="card">
+            <h3><i class="fa-solid fa-lock"></i> Secure</h3>
+            <p>Scoped styles and accessible markup ensure a solid baseline for production use.</p>
+          </article>
+          <article class="card">
+            <h3><i class="fa-solid fa-shuffle"></i> Flexible</h3>
+            <p>Easily adjust variables in SCSS for spacing, colors, and breakpoints.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX-LIKE FIXED BACKGROUND -->
+    <section id="parallax" class="section section--parallax">
+      <div class="container center-vert">
+        <div class="parallax__content">
+          <h2>Fixed Background Section</h2>
+          <p>Scroll to see the fixed background effect. Text stays readable with an overlay.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <section id="modal" class="section section--alt">
+      <div class="container">
+        <h2>Modal Windows</h2>
+        <p>Click the button to open a modal with additional content.</p>
+        <button class="btn" data-open-modal="#demoModal"><i class="fa-solid fa-window-maximize"></i> Open Modal</button>
+      </div>
+
+      <div class="modal" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__dialog" role="document">
+          <button class="modal__close" aria-label="Close modal" data-close-modal>&times;</button>
+          <h3 id="demoModalTitle">Hello from the Modal</h3>
+          <p>This modal is keyboard-accessible and closes on ESC, backdrop click, or the × button.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section">
+      <div class="container">
+        <h2>Embedded HTML5 Video</h2>
+        <video class="video" controls preload="metadata" poster="https://picsum.photos/1200/675?blur=3">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- CONTACT / SOCIAL -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Follow us</p>
+        <div class="social">
+          <a href="#" aria-label="Twitter" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> MySite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="1cecb8fb75aa3717f92d.js"></script>
+<script defer src="bundle.js"></script></body>
+</html>
